@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="5dip" >
+
+    <ImageView
+        android:id="@+id/imgContact"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_marginLeft="15dip"
+       >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_toRightOf="@+id/imgContact"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/childName"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:paddingLeft="5px"
+            android:text="No data"
+            android:textSize="25dip" />
+
+        <TextView
+            android:id="@+id/childPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:paddingLeft="5px"
+            android:text="No data"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgChk"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginTop="5dip"
+        android:layout_toLeftOf="@+id/rl"
+        android:background="@drawable/ic_status_complete"
+        android:visibility="gone" >
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+
+        <LinearLayout
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/edit_login_normal" >
+</LinearLayout>
+
+        <ImageView
+            android:id="@+id/popImg"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/btn_show_recipient" >
+        </ImageView>
+    </RelativeLayout>
+
+</RelativeLayout>

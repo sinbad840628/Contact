@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="220dip"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/bg_compose_top"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip"
+            android:text="新建分组"
+            android:textColor="#FFFFFF"
+            android:textSize="20dip" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="请输入分组名称"
+        android:textColor="#000000"
+        android:textSize="20dip" />
+
+    <EditText
+        android:id="@+id/edtNewGroupName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip" />
+
+    <LinearLayout
+        android:layout_marginTop="10dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="15dip"
+            android:padding="10dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定" 
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+             android:layout_marginLeft="15dip"
+            android:layout_marginRight="10dip"
+             android:padding="10dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+             android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

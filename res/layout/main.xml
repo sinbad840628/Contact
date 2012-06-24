@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/bg_compose_top" >
+
+        <LinearLayout
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/top_btn_pressed" >
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgContacts"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="6dip"
+            android:background="@drawable/contacts" />
+
+        <LinearLayout
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/top_btn_pressed" >
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgCreate"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="6dip"
+            android:background="@drawable/btn_add_contact_normal" />
+
+        <TextView
+            android:id="@+id/txtTopTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="分组"
+            android:textColor="#FFFFFF"
+            android:textSize="20dip" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl" />
+
+       <GridView
+        android:id="@+id/gv_buttom_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/rl_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+     
+
+        <LinearLayout
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:background="@drawable/top_btn_pressed" >
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:text="标记"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</RelativeLayout>

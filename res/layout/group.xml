@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+   
+  <TextView
+  	android:id="@+id/groupto"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:paddingTop="10px"
+  	android:paddingLeft="5px"
+  	android:paddingBottom="10px"
+  	android:textSize="26sp"
+  	android:text="No data"
+  	/>
+  <TextView 
+      	android:text="No data"
+      android:id="@+id/txtCount"
+      android:textSize="20sp"
+      	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:layout_marginLeft="5dip"
+  	android:layout_marginBottom="5dip"
+  	android:textColor="#000000"
+      />
+</LinearLayout>

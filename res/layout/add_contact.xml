@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    
+        
+        
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/bg_compose_top"
+            >
+         <LinearLayout
+             android:visibility="gone"
+             android:id="@+id/ll_left"
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/top_btn_pressed" >
+        </LinearLayout>
+
+        <ImageView
+             android:visibility="gone"
+            android:id="@+id/imgBack"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="6dip"
+            android:background="@drawable/back" />
+         <LinearLayout
+              android:visibility="gone"
+             android:id="@+id/ll_right"
+             android:layout_alignParentRight="true"
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/top_btn_pressed" >
+        </LinearLayout>
+
+        <ImageView
+             android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imgEdit"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="6dip"
+            android:background="@drawable/btn_header_edit_normal" />
+          <TextView
+              android:id="@+id/txtTitle"
+              android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip"
+            android:text="新建联系人"
+            android:textColor="#FFFFFF" />
+        </RelativeLayout>
+        
+
+      
+   
+
+    <!-- 带滚动条的上半部分信息 -->
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <!-- 头像和姓名 -->
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:id="@+id/imgbtn"
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                   
+                    android:src="@drawable/hi_mycard_photo_nor" 
+                    android:background="@drawable/default_avatar_big"/>
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="240dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_weight="4"
+                    android:hint="请输入姓名" />
+            </LinearLayout>
+
+
+
+
+- 
+
+            
+
+            
+
+            <!-- 手机 -->
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入电话"
+                    android:paddingLeft="115dip"
+                    android:phoneNumber="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="7dip"
+                    android:drawableRight="@drawable/controlbar_backward_normal"
+                    android:text="手机        "
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+            
+                 <!-- 家庭电话 -->
+
+            <RelativeLayout
+                 android:visibility="gone"
+                 android:id="@+id/postion_0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+         
+                    android:id="@+id/edtHomePhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入电话"
+                    android:paddingLeft="115dip"
+                    android:phoneNumber="true" />
+
+                <TextView
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="7dip"
+                    android:drawableRight="@drawable/controlbar_backward_normal"
+                    android:text="家庭电话"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+            <!-- 其他电话 -->
+
+            <RelativeLayout
+                 android:visibility="gone"
+                  android:id="@+id/postion_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    
+                    android:id="@+id/edtOtherPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入电话"
+                    android:paddingLeft="115dip"
+                    android:phoneNumber="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="7dip"
+                    android:drawableRight="@drawable/controlbar_backward_normal"
+                    android:text="其他电话"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+            
+                
+                
+                
+                
+                 <!-- Email -->
+
+            <RelativeLayout
+                android:visibility="gone"
+                 android:id="@+id/postion_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入Email"
+                    android:paddingLeft="60dip"
+                    android:phoneNumber="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="7dip"
+                    android:text="Email:"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+               <!-- 地址 -->
+
+            <RelativeLayout
+                android:visibility="gone"
+                 android:id="@+id/postion_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入地址"
+                    android:paddingLeft="60dip"
+                    android:phoneNumber="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="7dip"
+                    android:text="地址："
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+             <Button
+                  android:visibility="gone"
+                    android:id="@+id/btnDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击选择出生日期" />
+            
+                
+                
+                
+                
+                
+            
+                
+                
+            <RelativeLayout
+               android:layout_marginTop="10dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" 
+                >
+
+                <Button
+                    android:drawableRight="@drawable/into"
+                android:id="@+id/btnGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:text="未分组" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                   
+   
+                    android:drawableLeft="@drawable/ic_menu_merge"
+                    android:text="分组"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+            
+                  <RelativeLayout
+               android:layout_marginTop="10dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" 
+                >
+
+                <Button
+                    android:drawableRight="@drawable/into"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:text="手机" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:drawableLeft="@drawable/save"
+                    android:text="  存储"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+             <EditText
+                  android:visibility="gone"
+                   android:id="@+id/edtComment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dip"
+                    android:hint="可以在这里添加备注"
+                  
+                 />
+                
+
+          
+
+            <Button
+                android:id="@+id/btnMore"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dip"
+                android:layout_marginBottom="30dip"
+                android:layout_weight="1"
+                android:text="添加更多属性" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- 操作 -->
+
+    <LinearLayout
+       android:id="@+id/ll_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保存" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

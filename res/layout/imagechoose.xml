@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<!--图片浏览 -->
+	<Gallery android:id="@+id/imggallery" android:layout_height="110px"
+		android:layout_width="fill_parent" android:layout_marginTop="10px"
+		android:layout_alignParentLeft="true">
+	</Gallery>
+
+	<!--具体的当前图片 -->
+	<ImageSwitcher android:id="@+id/imgswitch"
+		android:layout_width="90px" android:layout_height="90px"
+		android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+		android:layout_alignBottom="@id/imggallery">
+	</ImageSwitcher>
+</RelativeLayout>
+
